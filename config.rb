@@ -24,7 +24,7 @@
 #   page "/admin/*"
 # end
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
+# Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
@@ -36,7 +36,21 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+set :file_watcher_ignore, [
+    /^\.idea\//,
+    /^\.bundle\//,
+    /^\.sass-cache\//,
+    /^\.git\//,
+    /^\.gitignore$/,
+    /\.DS_Store/,
+    /^build\//,
+    /^\.rbenv-.*$/,
+    /^Gemfile$/,
+    /^Gemfile\.lock$/,
+    /~$/,
+    /(^|\/)\.?#/
+]
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -66,5 +80,5 @@ configure :build do
   # activate :relative_assets
 
   # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  # set :http_path, "/Content/images/"
 end
