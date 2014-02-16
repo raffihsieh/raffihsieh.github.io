@@ -24,7 +24,7 @@ activate :directory_indexes
 #
 # A path which all have the same layout
 # with_layout :admin do
-#   page "/admin/*"
+  page "/project/*"
 # end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
