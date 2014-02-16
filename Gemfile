@@ -1,19 +1,20 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'http://rubygems.org'
+source "https://rubygems.org"
 
-gem "middleman", "~>3.1.4"
-
-# Live-reloading plugin
-gem "middleman-livereload", "~> 3.1.0"
-
-# For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
-
-# Cross-templating language block fix for Ruby 1.8
-platforms :mri_18 do
-  gem "ruby18_source_location"
+group :development do
+  gem 'rake', '~> 10.1.1'
+  gem 'jekyll', '~> 0.12'
+  gem 'rdiscount', '~> 2.0.7'
+  gem 'pygments.rb', '~> 0.3.4'
+  gem 'RedCloth', '~> 4.2.9'
+  gem 'haml', '~> 3.1.7'
+  gem 'compass', '~> 0.12.2'
+  gem 'sass', '~> 3.2'
+  gem 'sass-globbing', '~> 1.0.0'
+  gem 'rubypants', '~> 0.2.0'
+  gem 'rb-fsevent', '~> 0.9'
+  gem 'stringex', '~> 1.4.0'
+  gem 'liquid', '~> 2.3.0'
+  gem 'directory_watcher', '1.4.1'
 end
 
-gem 'haml'
-gem 'bootstrap-sass'
+gem 'sinatra', '~> 1.4.2'
